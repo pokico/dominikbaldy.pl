@@ -21,6 +21,11 @@ function setLang(lang) {
   });
 }
 
+// Set Polish as default on page load
+window.addEventListener("DOMContentLoaded", () => {
+  setLang("pl");
+});
+
 // Visit counter
 const counterElement = document.getElementById("counter");
 
@@ -46,63 +51,63 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentIndex = 5;
   let reverseIndex = 5;
 
-container.addEventListener("scroll", function () {
-  const maxScroll = container.scrollHeight - container.clientHeight;
-  const currentScroll = container.scrollTop;
-  const buffer = 300;
+  container.addEventListener("scroll", function () {
+    const maxScroll = container.scrollHeight - container.clientHeight;
+    const currentScroll = container.scrollTop;
+    const buffer = 300;
 
-  // Scroll DOWN
-if (currentScroll + buffer >= maxScroll) {
-  const insertIndex = currentIndex % originals.length;
-  const li = originals[insertIndex];
-  const newLi = li.cloneNode(true);
-  newLi.classList.add("animated-section", "visible", "fade-in");
+    // Scroll DOWN
+    if (currentScroll + buffer >= maxScroll) {
+      const insertIndex = currentIndex % originals.length;
+      const li = originals[insertIndex];
+      const newLi = li.cloneNode(true);
+      newLi.classList.add("animated-section", "visible", "fade-in");
 
-  const prevScrollHeight = container.scrollHeight;
+      const prevScrollHeight = container.scrollHeight;
 
-  ul.appendChild(newLi);
-  currentIndex++;
+      ul.appendChild(newLi);
+      currentIndex++;
 
-  if (ul.children.length > 5) {
-    const prevScrollHeight = container.scrollHeight;
-    const prevScrollTop = container.scrollTop;
+      if (ul.children.length > 5) {
+        const prevScrollHeight = container.scrollHeight;
+        const prevScrollTop = container.scrollTop;
 
-    ul.removeChild(ul.firstChild);
+        ul.removeChild(ul.firstChild);
 
-    const newScrollHeight = container.scrollHeight;
-    const deltaHeight = newScrollHeight - prevScrollHeight;
+        const newScrollHeight = container.scrollHeight;
+        const deltaHeight = newScrollHeight - prevScrollHeight;
 
-    // Compensate scroll to prevent visual jump
-    container.scrollTop = prevScrollTop + deltaHeight;
-  }
-}
-
-
-
-  // Scroll UP: add to top
-  if (currentScroll <= buffer) {
-    const insertIndex =
-      (originals.length - 1 - (reverseIndex % originals.length) + originals.length) %
-      originals.length;
-    const firstLi = originals[insertIndex].cloneNode(true);
-    firstLi.classList.add("animated-section", "visible", "fade-in");
-
-    const prevScrollHeight = container.scrollHeight;
-    const prevScrollTop = container.scrollTop;
-
-    ul.insertBefore(firstLi, ul.firstChild);
-
-    const newScrollHeight = container.scrollHeight;
-    const deltaHeight = newScrollHeight - prevScrollHeight;
-    container.scrollTop = prevScrollTop + deltaHeight;
-
-    if (ul.children.length > 1) {
-      ul.removeChild(ul.lastChild);
+        // Compensate scroll to prevent visual jump
+        container.scrollTop = prevScrollTop + deltaHeight;
+      }
     }
-    reverseIndex++;
-  }
-});
 
+    // Scroll UP: add to top
+    if (currentScroll <= buffer) {
+      const insertIndex =
+        (originals.length -
+          1 -
+          (reverseIndex % originals.length) +
+          originals.length) %
+        originals.length;
+      const firstLi = originals[insertIndex].cloneNode(true);
+      firstLi.classList.add("animated-section", "visible", "fade-in");
+
+      const prevScrollHeight = container.scrollHeight;
+      const prevScrollTop = container.scrollTop;
+
+      ul.insertBefore(firstLi, ul.firstChild);
+
+      const newScrollHeight = container.scrollHeight;
+      const deltaHeight = newScrollHeight - prevScrollHeight;
+      container.scrollTop = prevScrollTop + deltaHeight;
+
+      if (ul.children.length > 1) {
+        ul.removeChild(ul.lastChild);
+      }
+      reverseIndex++;
+    }
+  });
 
   // IntersectionObserver to toggle 'visible' class
   const observer = new IntersectionObserver(
