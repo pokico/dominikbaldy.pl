@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ul.appendChild(newLi);
       currentIndex++;
 
-      if (ul.children.length > 5) {
+      if (ul.children.length > 10) {
         const prevScrollHeight = container.scrollHeight;
         const prevScrollTop = container.scrollTop;
 
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const deltaHeight = newScrollHeight - prevScrollHeight;
       container.scrollTop = prevScrollTop + deltaHeight;
 
-      if (ul.children.length > 1) {
+      if (ul.children.length > 10) {
         ul.removeChild(ul.lastChild);
       }
       reverseIndex++;

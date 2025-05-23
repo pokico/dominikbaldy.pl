@@ -120,10 +120,26 @@ section.visible {
 
 h3 {
   border-bottom: 2px solid var(--accent);
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
+  padding-bottom: 0.5vh;
+  margin-bottom: 0.1vh;
   color: var(--highlight);
-  font-size: 1.6rem;
+  font-size: 2.5vh;
+  position: relative;
+  animation: popIn 1.2s ease-out;
+}
+h4 {
+  font-weight: normal;
+  padding-bottom: 0.3vh;
+  margin-bottom: 0.3vh;
+  font-size: 2vh;
+  position: relative;
+  animation: popIn 1.2s ease-out;
+}
+h5 {
+  font-weight: normal;
+  padding-bottom: 0.2vh;
+  margin-bottom: 0.2vh;
+  font-size: 1.5vh;
   position: relative;
   animation: popIn 1.2s ease-out;
 }
