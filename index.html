@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dominik Baldy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div class="controls">
+      <button onclick="setLang('pl')">🇵🇱</button>
+      <button onclick="setLang('en')">🇬🇧</button>
+      <button onclick="setLang('de')">🇩🇪</button>
+    </div>
+    <header>
+      <h1
+        data-pl="Dominik Baldy"
+        data-en="Dominik Baldy"
+        data-de="Dominik Baldy"
+      >
+        Dominik Baldy
+      </h1>
+      <h2 class="contact-links">
+        <a href="mailto:baldydominik@op.pl">baldydominik@op.pl</a>
+        <span class="separator">|</span>
+        <a href="https://www.linkedin.com/in/dominik-baldy" target="_blank"
+          >LinkedIn</a
+        >
+      </h2>
+
+      <h2 id="visit-counter">
+        👀 Liczba odwiedzin: <span id="counter">...</span>
+      </h2>
+    </header>
+    <main id="scroll-container">
+      <ul
+        id="scroll-loop"
+        data-current="0"
+        style="list-style: none; margin: 0; padding: 0"
+      >
+        <li>
+          <section class="animated-section visible">
+            <h3 data-pl="Profil" data-en="Profile" data-de="Profil">Profil</h3>
+            <p
+              data-pl="Specjalista IT z doświadczeniem w zarządzaniu incydentami, wsparciu technicznym oraz produkcji przemysłowej."
+              data-en="IT Specialist with experience in incident management, technical support, and industrial production."
+              data-de="IT-Spezialist mit Erfahrung im Incident Management, technischem Support und industrieller Produktion."
+            >
+              Specjalista IT z doświadczeniem w zarządzaniu incydentami,
+              wsparciu technicznym oraz produkcji przemysłowej.
+            </p>
+          </section>
+        </li>
+        <li>
+          <section class="animated-section visible">
+            <h3
+              data-pl="Doświadczenie zawodowe"
+              data-en="Work Experience"
+              data-de="Berufserfahrung"
+            >
+              Doświadczenie zawodowe
+            </h3>
+            <div class="job">
+              <h4
+                data-pl="Stefanini EMEA – Specjalista ds. Zarządzania Incydentami"
+                data-en="Stefanini EMEA – Incident Management Specialist"
+                data-de="Stefanini EMEA – Spezialist für Vorfallmanagement"
+              >
+                Stefanini EMEA – Specjalista ds. Zarządzania Incydentami
+              </h4>
+              <p
+                data-pl="11.2024 – obecnie (zdalnie)"
+                data-en="Nov 2024 – currently (remotely)"
+                data-de="Nov 2024 – derzeit (remote)"
+              >
+                11.2024 – obecnie (zdalnie)
+              </p>
+            </div>
+            <div class="job">
+              <h4
+                data-pl="Stefanini EMEA – Mł. Specjalista ds. Zarządzania Incydentami"
+                data-en="Stefanini EMEA – Jr. Incident Management Specialist"
+                data-de="Stefanini EMEA – Junior Spezialist für Vorfallmanagement"
+              >
+                Stefanini EMEA – Mł. Specjalista ds. Zarządzania Incydentami
+              </h4>
+              <p
+                data-pl="03.2023 – 10.2024"
+                data-en="Mar 2023 – Oct 2024"
+                data-de="Mär 2023 – Okt 2024"
+              >
+                03.2023 – 10.2024
+              </p>
+            </div>
+            <div class="job">
+              <h4
+                data-pl="Stefanini EMEA – Specjalista ds. Wsparcia Technicznego"
+                data-en="Stefanini EMEA – Technical Support Specialist"
+                data-de="Stefanini EMEA – Technischer Support Spezialist"
+              >
+                Stefanini EMEA – Specjalista ds. Wsparcia Technicznego
+              </h4>
+              <p
+                data-pl="10.2021 – 03.2023"
+                data-en="Oct 2021 – Mar 2023"
+                data-de="Okt 2021 – Mär 2023"
+              >
+                10.2021 – 03.2023
+              </p>
+            </div>
+            <div class="job">
+              <h4
+                data-pl="DFM Doors – Technolog"
+                data-en="DFM Doors – Technologist"
+                data-de="DFM Doors – Technologe"
+              >
+                DFM Doors – Technolog
+              </h4>
+              <p
+                data-pl="06.2019 – 09.2021"
+                data-en="Jun 2019 – Sep 2021"
+                data-de="Jun 2019 – Sep 2021"
+              >
+                06.2019 – 09.2021
+              </p>
+            </div>
+            <div class="job">
+              <h4
+                data-pl="DFM Doors – Operator CNC / Montażysta"
+                data-en="DFM Doors – CNC Operator / Assembler"
+                data-de="DFM Doors – CNC-Bediener / Monteur"
+              >
+                DFM Doors – Operator CNC / Montażysta
+              </h4>
+              <p
+                data-pl="07.2017 – 05.2019"
+                data-en="Jul 2017 – May 2019"
+                data-de="Jul 2017 – Mai 2019"
+              >
+                07.2017 – 05.2019
+              </p>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="animated-section visible">
+            <h3 data-pl="Edukacja" data-en="Education" data-de="Ausbildung">
+              Edukacja
+            </h3>
+            <div class="school">
+              <h4
+                data-pl="Politechnika Opolska"
+                data-en="Opole University of Technology"
+                data-de="Technische Universität Oppeln"
+              >
+                Politechnika Opolska
+              </h4>
+              <p
+                data-pl="Inżynier, Automatyka i Robotyka"
+                data-en="Engineer, Automation and Robotics"
+                data-de="Ingenieur, Automatisierung und Robotik"
+              >
+                Inżynier, Automatyka i Robotyka (2016–2020)
+              </p>
+            </div>
+            <div class="school">
+              <h4
+                data-pl="ZSE im. T. Kościuszki w Opolu"
+                data-en="T. Kościuszko Electrical School Complex in Opole"
+                data-de="T. Kościuszko Schule für Elektrotechnik in Oppeln"
+              >
+                ZSE im. T. Kościuszki w Opolu
+              </h4>
+              <p
+                data-pl="Technik Mechatronik"
+                data-en="Mechatronics Technician"
+                data-de="Mechatronik-Techniker"
+              >
+                Technik Mechatronik (2012–2016)
+              </p>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="animated-section visible">
+            <h3
+              data-pl="Certyfikaty"
+              data-en="Certifications"
+              data-de="Zertifikate"
+            >
+              Certyfikaty
+            </h3>
+            <p
+              data-pl="ITIL® Foundation – PeopleCert (01.2024 – 01.2028)
+Credential ID: GR671739676DB"
+              data-en="ITIL® Foundation – PeopleCert (Jan 2024 – Jan 2028)
+Credential ID: GR671739676DB"
+              data-de="ITIL® Foundation – PeopleCert (Jan 2024 – Jan 2028)
+Zertifikats-ID: GR671739676DB"
+            >
+              ITIL® Foundation – PeopleCert (01.2024 – 01.2028)<br />Credential
+              ID: GR671739676DB
+            </p>
+          </section>
+        </li>
+        <li>
+          <section class="animated-section visible">
+            <h3 data-pl="Umiejętności" data-en="Skills" data-de="Fähigkeiten">
+              Umiejętności
+            </h3>
+            <ul>
+              <li>ITIL Certified, ITIL Process</li>
+              <li>Incident & Crisis Management</li>
+              <li>CAD, AutoCAD, CNC</li>
+              <li
+                data-pl="Wsparcie techniczne, Hardware"
+                data-en="Technical support, Hardware"
+                data-de="Technischer Support, Hardware"
+              >
+                Wsparcie techniczne, Hardware
+              </li>
+            </ul>
+          </section>
+        </li>
+      </ul>
+    </main>
+    <footer
+      data-pl="&copy; 2025 Dominik Baldy | powstała metodą Vibe Coding™ 😎"
+      data-en="&copy; 2025 Dominik Baldy | built entirely with Vibe Coding™ 😎"
+      data-de="&copy; 2025 Dominik Baldy | entwickelt mit reinem Vibe Coding™ 😎"
+    >
+      &copy; 2025 Dominik Baldy | powstała metodą Vibe Coding™ 😎
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+:root {
+        --bg-dark: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+        --fg-dark: #ffffffcc;
+        --bg-light: linear-gradient(135deg, #ffffff, #e3f2fd);
+        --fg-light: #1a1a1a;
+        --accent: #00ffff;
+        --highlight: #ff4081;
+        --accent-secondary: #7c4dff;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: var(--bg-dark);
+        color: var(--fg-dark);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        transition: background 0.4s, color 0.4s;
+      }
+
+      body.light-mode {
+        background: var(--bg-light);
+        color: var(--fg-light);
+      }
+
+      #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -3;
+        pointer-events: none;
+      }
+
+      header {
+        height: 10vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0.5em;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        z-index: 100;
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      header h1 {
+        font-size: 3vh;
+        margin: 0;
+        animation: pulse 2s infinite alternate;
+      }
+
+      header h2 {
+        font-size: 1.5vh;
+        font-weight: 300;
+      }
+
+      .controls {
+        position: fixed;
+        top: 0.5vh;
+        right: 0.5vh;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3vh;
+        z-index: 200;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 0.3vh;
+        border-radius: 4px;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      .controls button {
+        padding: 0.4vh 0.8vh;
+        border: none;
+        border-radius: 4px;
+        background: var(--accent);
+        color: black;
+        cursor: pointer;
+        font-size: 1.7vh;
+      }
+
+      #scroll-container {
+        height: 90vh;
+        overflow-y: auto;
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+
+      section {
+        position: relative;
+        min-height: 5vh;
+        max-width: 90vh;
+        margin: 3vh auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(0px);
+        transition: all 0.8s ease-out;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        color: inherit;
+        border-radius: 150px;
+      }
+
+      section.visible {
+        opacity: 1;
+        box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+        background: rgba(0, 0, 0, 0.1);
+        transition: all 1s ease;
+        animation: fadeInSection 1s ease forwards;
+      }
+
+      h3 {
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--highlight);
+        font-size: 1.6rem;
+        position: relative;
+        animation: popIn 1.2s ease-out;
+      }
+
+      .job,
+      .school {
+        margin-bottom: 1.5rem;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2vh;
+        text-align: center;
+        padding: 0.2rem;
+        background: #111;
+        color: #aaa;
+        font-size: 1vh;
+        z-index: 100;
+      }
+
+		.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          color: inherit;
+        }
+        50% {
+          color: var(--accent);
+          text-shadow: 0 0 15px var(--accent-secondary);
+        }
+        100% {
+          color: inherit;
+        }
+      }
+      @keyframes popIn {
+        from {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @keyframes gradientFlow {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .animated-li {
+        animation: fadeInUp 1s ease forwards;
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          transform: translateY(40px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      #scroll-container::-webkit-scrollbar {
+        display: none;
+      }
+
+
+      @keyframes fadeInSection {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .contact-links {
+        font-weight: 300;
+        font-size: 1.5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1vh;
+        flex-wrap: wrap;
+      }
+
+      .contact-links a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact-links a:hover {
+        color: var(--highlight);
+        text-decoration: underline;
+      }
+
+      .separator {
+        color: var(--fg-dark);
+        opacity: 0.6;
+      }
