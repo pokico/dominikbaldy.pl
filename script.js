@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("scroll-container");
   const ul = document.getElementById("scroll-loop");
 
-  let currentIndex = 5;
-  let reverseIndex = 5;
+  let currentIndex = 0;
+  let reverseIndex = 0;
 
   container.addEventListener("scroll", function () {
     const maxScroll = container.scrollHeight - container.clientHeight;
